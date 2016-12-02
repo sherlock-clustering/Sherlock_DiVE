@@ -79,10 +79,10 @@
                 edgeWidth: 0.005,//change to 1 if sizeAttenuation = false. Update 11/10/2016: This should be programmed. 
                 hover: function (node) {//what should happen when a user hovers over a node with the mouse
                     HandleNodeHovering(node);
-                }/*,
+                },
                 mousedown: function (node) {//what should happen when a user clicks on a node. Disabled at the moment
                     HandleNodeClicking(node);
-                }*/
+                }
             });
         }
       
@@ -97,12 +97,18 @@
             node.setColor("white");//make hovered node white
             redrawSameScene();
             var categories = node._categoriesValues;
-            var text = node.getId(); //+ "<br>" + props[0] + "<br>" + props[2] + "<br>" + props[4]            
+            var text = node.getId(); //+ "<br>" + props[0] + "<br>" + props[2] + "<br>" + props[4]   
+            var id = text;
             //if (node._expandable) { text = "Click to open! <br> " + text; }
             if (show_popup.checked) {
                 $("#label").text("");
-                for (var i = 0; i < categories.length; i++) { text += "<br>" + categories[i]; }
+                //for (var i = 0; i < categories.length; i++) { text += "<br>" + categories[i]; }
+                //$("#label").text("");
+
+                image_text = "<img src=\"photos/" + id  +"\" alt=\"Picture cannot be loaded\" style=\"width:304px;height:228px;\">"                
+                text = text + "<br>" + image_text;
                 myPop.attachHTML(text);
+                
                 myPop.show(cursorX, cursorY, 0, 0); //params are: x, y, width, height. 3 and 5 are number of pixels relative to the node where the message should appear(you can play with these numbers)
             }
             else {
@@ -111,6 +117,30 @@
             }
             
         }
+        
+        ///** Defines what happens when a user hovers over a node (point)
+        // * @param {Graph.node} node - a node from the graph that was hovered over
+        //*/
+        //function HandleNodeHovering(node) {
+        //    if (previoslyhoveredNode != undefined)//if some node was hovered before, return its color
+        //    { previoslyhoveredNode.setColorHex("#" + previosHoveredcolor); }
+        //    previosHoveredcolor = node.getColor();
+        //    previoslyhoveredNode = node;
+        //    node.setColor("white");//make hovered node white
+        //    redrawSameScene();
+        //    //var categories = node._categoriesValues;
+        //    var text = node.getId(); //+ "<br>" + props[0] + "<br>" + props[2] + "<br>" + props[4]            
+            
+        //    if (show_popup.checked) {
+        //        $("#label").text("");
+        //        text = "<img src=\"camera_fingerprints/pic_mountain.jpg\" alt=\"Mountain View\" style=\"width:304px;height:228px;\">"
+        //        myPop.attachHTML(text);
+                
+        //        myPop.show(cursorX, cursorY, 0, 0); //params are: x, y, width, height. 3 and 5 are number of pixels relative to the node where the message should appear(you can play with these numbers)
+        //    }
+           
+            
+        //}
 
         /** Prepares the initial colors of the points based on their coordinates. Optional. 
         * @param {list} coords - The three coordinates of the point 
