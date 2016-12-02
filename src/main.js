@@ -2,7 +2,7 @@
 
 
         var loadFirstTime = true; //keeps track of whether the frame was loaded for the first time
-        var frameStartsAt = 285;//pixels 
+        var frameStartsAt = 0;//285 pixels 
         var sizeAtShow = document.getElementById("sizeattenuation");
         var myColorpicker;//UI
         var cursorX;//used in Popup message for UI
