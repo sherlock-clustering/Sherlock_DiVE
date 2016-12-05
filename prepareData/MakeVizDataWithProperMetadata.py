@@ -58,7 +58,19 @@ def ReadMetaDataFile(metaDataFile):
                     metaDataDict[id] = items
         return metaDataDict
 
+##to be used to read our filelists
+#def ReadFilelist(metaDataFile):
+#        """File format: Pentax_OptioA40_0_30521.JPG """
+#        metaDataDict = dict()
+#        for line in fileinput.input([metaDataFile]):
+#            if line != "\n":   
+#                for items in csv.reader([line], delimiter='_'):   
+#                    camera = str(items[0]) + "_" + str(items[1]) + "_" + str(items[2]) 
+#                    id = camera + "_"+ str(items[3])                             
+#                    metaDataDict[id] = [id, camera]
+#        return metaDataDict
 
+     
 def ReadCoordinates(file):     
     fixed = dict()
     maxabs = 0
