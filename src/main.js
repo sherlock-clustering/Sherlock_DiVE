@@ -22,6 +22,8 @@
         var pointsSet;
         var old_d = undefined;// used in determining the mouse zoom speed 
         var start_zoomin_factor = 1;
+        var dataFileName = undefined;
+        var dataset = undefined;
         //################# global variables definitions end here
 
         //################# global code starts here

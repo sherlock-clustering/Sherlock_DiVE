@@ -21,6 +21,9 @@
         function LoadDataFromFile(file) {
             var reader = new FileReader();
             reader.readAsText(file);
+            dataFileName = file.name;
+            dataset = dataFileName.split("_");
+            dataset = dataset[0];
             reader.onloadend = function (e) {
                 var contents = e.target.result;                
                 InitGlobalDataVariables();
@@ -104,8 +107,8 @@
                 $("#label").text("");
                 //for (var i = 0; i < categories.length; i++) { text += "<br>" + categories[i]; }
                 //$("#label").text("");
-
-                image_text = "<img src=\"photos/" + id  +"\" alt=\"Picture cannot be loaded\" style=\"width:304px;height:228px;\">"                
+                var imagesFolder = "data/images_" + dataset;
+                image_text = "<img src=\"" + imagesFolder + "/" + id  +"\" alt=\"Picture cannot be loaded\" style=\"width:304px;height:228px;\">"                
                 text = text + "<br>" + image_text;
                 myPop.attachHTML(text);
                 
