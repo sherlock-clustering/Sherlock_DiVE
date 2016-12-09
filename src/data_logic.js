@@ -108,8 +108,10 @@
                 //for (var i = 0; i < categories.length; i++) { text += "<br>" + categories[i]; }
                 //$("#label").text("");
                 var imagesFolder = "data/images_" + dataset;
-                image_text = "<img src=\"" + imagesFolder + "/" + id  +"\" alt=\"Picture cannot be loaded\" style=\"width:304px;height:228px;\">"                
-                text = text + "<br>" + image_text;
+                var fingerprintsFolder = "data/fingerprints_" + dataset;
+                image_text = "<img src=\"" + imagesFolder + "/" + id + "\" alt=\"Image cannot be loaded\" style=\"width:304px;height:228px;\">";
+                fingerprint_text = "<img src=\"" + fingerprintsFolder + "/" + id + "\" alt=\"Fingerprint cannot be loaded\" style=\"width:304px;height:228px;\">";
+                text = text + "<br>" + image_text + "<br>" + fingerprint_text;
                 myPop.attachHTML(text);
                 
                 myPop.show(cursorX, cursorY, 0, 0); //params are: x, y, width, height. 3 and 5 are number of pixels relative to the node where the message should appear(you can play with these numbers)
