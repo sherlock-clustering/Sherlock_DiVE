@@ -102,7 +102,7 @@
             var categories = node._categoriesValues;
             var text = node.getId(); //+ "<br>" + props[0] + "<br>" + props[2] + "<br>" + props[4]   
             var id = text;
-            var fingerID = id.split(".")[0];            
+            var baseID = id.split(".")[0];            
             //if (node._expandable) { text = "Click to open! <br> " + text; }
             if (show_popup.checked) {
                 $("#label").text("");
@@ -110,8 +110,8 @@
                 //$("#label").text("");
                 var imagesFolder = "data/images_" + dataset;
                 var fingerprintsFolder = "data/fingerprints_" + dataset;
-                image_text = "<img src=\"" + imagesFolder + "/" + id + "\" alt=\"Image cannot be loaded\" style=\"width:304px;height:228px;\">";
-                fingerprint_text = "<img src=\"" + fingerprintsFolder + "/" + fingerID + ".png" + "\" alt=\"Fingerprint cannot be loaded\" style=\"width:304px;height:228px;\">";
+                image_text = "<img src=\"" + imagesFolder + "/" + baseID + ".jpg"  + "\" alt=\"Image cannot be loaded\" style=\"width:304px;height:228px;\">";
+                fingerprint_text = "<img src=\"" + fingerprintsFolder + "/" + baseID + ".png" + "\" alt=\"Fingerprint cannot be loaded\" style=\"width:304px;height:228px;\">";
                 text = text + "<br>" + image_text + "<br>" + fingerprint_text;
                 myPop.attachHTML(text);
                 
