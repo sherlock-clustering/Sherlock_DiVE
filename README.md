@@ -6,7 +6,7 @@ Please cite the software if you are using it in your scientific publication:
 # DiVE   -  Interactive Visualization of Embedded Data
 
  
-DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research, ) or [tSNE](https://github.com/lvdmaaten/bhtsne) .       
+DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research ) or [tSNE](https://github.com/lvdmaaten/bhtsne) .       
 
 For an online demo click  [here](http://sonjageorgievska.github.io/DiVE/ "online demo"). Or open index.html in Mozzila Firefox to run a demo on your local computer. You need to select data from your local computer to display. Example data is in the folder *data*.   
 
@@ -48,7 +48,7 @@ If you would like to use Google Chrome or any other browser, you would have to
 * *Centralize*  : will move data back to center of the screen, zoomed-in
 * *See all data* : will zoom-out such that all data is visible
 * *Scase point size*: very useful when the user has zoomed-in enough. When this option is not selected, the points do not get bigger as the camera moves closer to them, so that they can be separated and inspected individually. 
-* *Show point info in popup* : when selected, the information about a point when hovering over it will be displayed in a pop-up message  rather than at the top left corner of the screen
+* *Show point info in popup* : when selected, the node image (and fingerprint if exists) will be displayed in a pop-up.
 
 ### Coloring by value of property###
 
@@ -67,7 +67,7 @@ is created in any programming language, where the keys are the id’s of the poi
 		    {
 		        public List<double> Coordinates;
 		        public List<object> Categories;
-		        public List<double> Properties;
+		        public List<object> Properties;
 		    }
 
 `Coordinates, Categories` and `Properties` are as discussed in the previous section.
@@ -82,6 +82,12 @@ Here is an example of an entry of the serialized dictionary in a *data.json* fil
 Optionally, if data has properties, the dictionary should also contain an entry 
 
 		"NamesOfProperties":["name1", "name2", ..., "name_n"]
+
+Optionally, if images are associated to the nodes, the node image can be displayed in a pop-up when hovering over the node. 
+If the datafile starts with `namedataset_` then the folder with images should be `images_namedataset` in folder `data`. 
+(see examples in folder `data`, sorry for their size). The name of an image should be `nodeId.jpg`.. 
+
+If your images are in a `png` format then the `fingerprints_namedataset` folder is preferable, currently made for the Sherlock purposes.
 
 ## From output of LargeVis to input of DiVE ##
 
