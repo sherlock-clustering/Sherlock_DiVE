@@ -254,17 +254,19 @@ function InitGlobalDataVariables() {
 
         }
 
-        function CheckIfPropertyIsCategorical(indexOfProperty){
-            var isCategorical = false;
-            for (var i = 0; i < graph._nodes.length; i++) {
-                var value = graph._nodes[i]._propertiesValues[indexOfProperty];
-                var isNotANumber = isNaN(value);
-                if (isNotANumber){
-                    isCategorical = true;
-                    break;
-                }
-            }
-            return isCategorical;
+
+        function CheckIfPropertyIsCategorical(indexOfProperty){//hacked for the purpose of sherlock - always gives categorical
+            //var isCategorical = false;
+            //for (var i = 0; i < graph._nodes.length; i++) {
+            //    var value = graph._nodes[i]._propertiesValues[indexOfProperty];
+            //    var isNotANumber = isNaN(value);
+            //    if (isNotANumber){
+            //        isCategorical = true;
+            //        break;
+            //    }
+            //}
+            //return isCategorical;
+            return true;
         }
 
         function ColorizeCategory(indexOfProperty) {
@@ -286,7 +288,8 @@ function InitGlobalDataVariables() {
 
             var numberOfColors = Object.keys(entriesColor).length;
             var colors = getColors(numberOfColors);
-            var first10colors=["blue", "green", "red", "yellow", "purple", "orange", "pink", "brown", "tirquize", "magenta"]
+            var first10colors = ["blue", "green", "red", "yellow", "purple", "orange", "pink", "brown", "tirquize", "magenta"]
+            //var first10colors = ["lightblue", "lightgreen", "lightred", "lightyellow", "lightpurple", "lightorange", "lightpink", "lightbrown", "lighttirquize", "lightmagenta"]
             var count = 0;
             for (var i = 0; i < graph._nodes.length; i++) {
                 var node = graph._nodes[i];
