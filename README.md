@@ -11,15 +11,13 @@ Datasets from the Dresden Image Database with ground truth (source camera) and w
  
 Please cite the software if you are using it in your scientific publication:
 
-[![DOI](https://zenodo.org/badge/69663950.svg)](https://zenodo.org/badge/latestdoi/69663950)
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9ba82068db534a19b0d70dd80c8238bd)](https://www.codacy.com/app/sonjageorgievska/DiVE?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NLeSC/DiVE&amp;utm_campaign=Badge_Grade)
 
 # DiVE   -  Interactive Visualization of Embedded Data
 
  
-DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research, ) or [tSNE](https://github.com/lvdmaaten/bhtsne) .       
-
-For an online demo click  [here](http://NLeSC.github.io/DiVE/ "online demo").   
+DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research, ) or [tSNE](https://github.com/lvdmaaten/bhtsne).       
 
 New: a pipeline for Linux consisting of LargeVis and DiVE has been released here: https://github.com/sonjageorgievska/Embed-Dive .
 
