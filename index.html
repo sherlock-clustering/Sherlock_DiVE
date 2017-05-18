@@ -89,18 +89,18 @@
 
 <body>
     <div id="panel" class="collapsed">
-        <h1 style=" font: 20px Arial ; color: darkblue">3D data visualization</h1>
+        <h1 style=" font: 20px Arial ; color: darkblue">3D embedded images visualization</h1>
         <p> </p>
         <p> </p>
         <p> </p>
         <!--UI components-->
         <fieldset class="fieldset-auto-width" style="font: 15px Arial">
-            <legend style=" font: 15px Arial">Upload local data file </legend>
+            <legend style=" font: 15px Arial">Upload local json data file </legend>
             <input type="file" id="dataFile" multiple size="50" onchange="LoadLocalDataSet()">
         </fieldset>
         <p> </p> <p> </p>
         <fieldset class="fieldset-auto-width" style="font: 15px Arial">
-            <legend style=" font: 15px Arial">Search by id, name, category, etc... </legend>
+            <legend style=" font: 15px Arial">Search by id, name, camera, etc... </legend>
 
             <input type="text" name="search" id="search" class="textbox" onclick="empty_notification()" />
             <button style=" font: 14px Arial" onclick="searchSequence()" name="button">Search</button>
@@ -147,8 +147,8 @@
 
         <div>
             <fieldset class="fieldset-auto-width" style="font: 15px Arial">
-                <legend style=" font: 15px Arial">Coloring by property</legend>
-                <p> Select a property: </p>
+                <legend style=" font: 15px Arial">Coloring by cluster label or camera</legend>
+                <p> Select a label: </p>
                 <select name="combo" id="combo" onchange="HandlePropertyChange()"></select>
                 <p>
                     <input type="checkbox" name="show_color_map" id="show_color_map" onchange="HandleShowColorMapChange()" checked="true" />

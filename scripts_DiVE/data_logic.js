@@ -80,7 +80,7 @@ function InitGlobalDataVariables() {
                 //nodeImage: "imgs/disc.png",
                 nodeImageTransparent: true,
                 antialias: true,
-                bgColor: 'white',//'lightskyblue', 'lightgrey'
+                bgColor: 'lightgrey',//'lightskyblue', 'lightgrey'
                 nodeSize: node_size,//10,//0.016,//change to 10 if sizeAttenuation = false, otherwise the nodes are too small and not visible
                 edgeWidth: 0.005,//change to 1 if sizeAttenuation = false. Update 11/10/2016: This should be programmed. 
                 hover: function (node) {//what should happen when a user hovers over a node with the mouse
