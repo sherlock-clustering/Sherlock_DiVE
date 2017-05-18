@@ -1,11 +1,11 @@
 
-
+# Preamble#
 
 This is a version of [DiVE](https://github.com/NLeSC/DiVE) customized for the Sherlock project Clustering Image Noise patterns.
 
 To upload different image datasets, go to https://sherlock-clustering.github.io/Sherlock_DiVE/.
 
-#Datasets
+## Datasets ##
 
 Datasets from the Dresden Image Database with ground truth (source camera) and with cluster labels can be found in https://figshare.com/articles/data_zip/5016965 . Download, extract and upload each json file via the 'Upload local json data file' section.
  
@@ -23,7 +23,7 @@ For an online demo click  [here](http://NLeSC.github.io/DiVE/ "online demo").
 
 New: a pipeline for Linux consisting of LargeVis and DiVE has been released here: https://github.com/sonjageorgievska/Embed-Dive .
 
-##Installation - for users ##
+## Installation - for users ##
 
 The simplest way is to download the code and open *index.html* with your browser. Try it by uploading datasets from the *data* folder. The application can work completely offline.    
 
