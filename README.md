@@ -7,8 +7,7 @@ To upload different image datasets, go to https://sherlock-clustering.github.io/
 
 #Datasets
 
-Datasets with ground truth can be found in the folder https://github.com/sherlock-clustering/cluster-analysis/tree/master/data/embedded/json. 
+Datasets from the Dresden Image Database with ground truth (source camera) and with cluster labels can be found in https://figshare.com/articles/data_zip/5016965 . Download, extract and upload each json file via the 'Upload local json data file' section.
+ 
 
-Datasets with cluster labels are in the folder https://github.com/sherlock-clustering/cluster-analysis/tree/master/data/combined.
 
-TBC
