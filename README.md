@@ -132,7 +132,7 @@ It can be processed into an input of the viewer by using the python script "Make
 
 
 ## Licence ##
-The software is released under the Creative Commons Attribution-NoDerivatives licence.
+The software is released under the GPL2 licence.
 [Contact](mailto:s.georgievska@esciencecenter.nl) the author if you would like a version with an Apache licence 
 
 
