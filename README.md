@@ -7,7 +7,7 @@ To upload different image datasets, go to https://sherlock-clustering.github.io/
 
 ## Datasets 
 
-Datasets from the Dresden Image Database with ground truth (source camera) and with cluster labels can be found in https://figshare.com/articles/data_zip/5016965 . Download, extract and upload each json file via the 'Upload local json data file' section. To color them based on label go to the last section of the UI.
+Embedded datasets from the Dresden Image Database accompanied with ground truth (source camera) and with cluster labels can be found in https://figshare.com/articles/data_zip/5016965 . Download, extract and upload each json file via the 'Upload local json data file' section. To color them based on label go to the last section of the UI.
  
 Please cite the software if you are using it in your scientific publication:
 
@@ -20,7 +20,7 @@ Please cite the software if you are using it in your scientific publication:
 # (Sherlock)DiVE   -  Interactive Visualization of Embedded Data
 
  
-DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research, ) or [tSNE](https://github.com/lvdmaaten/bhtsne).       
+(Sherlock)DiVE is an interactive 3D web viewer of up to million points on one screen that represent data. It is meant to provide interaction for viewing high-dimensional data that has been previously [embedded](https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction) in 3D. For embedding (non-linear dimensionality reduction, or manifold learning) we recommend [LargeVis](http://github.com/sonjageorgievska/LargeVis/) (a new algorithm by Microsoft Research, ) or [tSNE](https://github.com/lvdmaaten/bhtsne).       
 
 ## Installation - for users ##
 
