@@ -80,7 +80,7 @@ function InitGlobalDataVariables() {
                 //nodeImage: "imgs/disc.png",
                 nodeImageTransparent: true,
                 antialias: true,
-                bgColor: 'lightgrey',//'lightskyblue', 'lightgrey'
+                bgColor: 'white',//'lightskyblue', 'lightgrey'
                 nodeSize: node_size,//10,//0.016,//change to 10 if sizeAttenuation = false, otherwise the nodes are too small and not visible
                 edgeWidth: 0.005,//change to 1 if sizeAttenuation = false. Update 11/10/2016: This should be programmed. 
                 hover: function (node) {//what should happen when a user hovers over a node with the mouse
@@ -272,7 +272,7 @@ function InitGlobalDataVariables() {
         function ColorizeCategory(indexOfProperty) {
             colorsDict = [];
             entriesColor = [];
-            var count10 = 0;
+            var count30 = 0;
             for (var i = 0; i < graph._nodes.length; i++) {
                 var node = graph._nodes[i];
                 var key = node._propertiesValues[indexOfProperty];
@@ -284,12 +284,16 @@ function InitGlobalDataVariables() {
                     entriesColor[key] = 1;                    
                 }
             }
-            var tenthlargest = findKthLargest(Object.values(entriesColor), 10);
+            var thirtythlargest = findKthLargest(Object.values(entriesColor), 30);
 
             var numberOfColors = Object.keys(entriesColor).length;
             var colors = getColors(numberOfColors);
-            var first10colors = ["blue", "green", "red", "yellow", "purple", "orange", "pink", "brown", "tirquize", "magenta"]
-            //var first10colors = ["lightblue", "lightgreen", "lightred", "lightyellow", "lightpurple", "lightorange", "lightpink", "lightbrown", "lighttirquize", "lightmagenta"]
+            var first30colors = ["blue", "darkgreen", "red", "yellow", "purple", "orange", "pink", "darkred", "navy", "darkkhaki",
+                             'lightskyblue', 'lightgreen', 'orchid', 'cadetblue', 'cyan', 'darksalmon', 'blueviolet',
+'seagreen', 'darkolivegreen', 'seashell',
+'royalblue', 'springgreen', 'indianred', 'darkgoldenrod', 'magenta', 'orangered', 'deeppink', 'rosybrown', 'darkturquoise', 'darkgray'];
+
+
             var count = 0;
             for (var i = 0; i < graph._nodes.length; i++) {
                 var node = graph._nodes[i];
@@ -306,9 +310,9 @@ function InitGlobalDataVariables() {
                     { colorPoint = "grey" }
                     else
                     {
-                        if (entriesColor[key] >= tenthlargest && count10 < 10) {
-                            colorPoint = first10colors[count10];
-                            count10++;
+                        if (entriesColor[key] >= thirtythlargest && count30 < 30) {
+                            colorPoint = first30colors[count30];
+                            count30++;
                         }
                         else {
                             colorPoint = colors[count];
@@ -519,7 +523,9 @@ function InitGlobalDataVariables() {
                             text2.style.height = 100;
                             text2.innerHTML = propertyValue + ":" + items[i][1];
                             text2.style.color = colorsDict[propertyValue];
+                            text2.style.fontWeight = "bold";
                             text2.style.top = count + 'px';
+                            text2.style.fontFamily = "Arial";
                             text2.style.left = 305 + 'px';
                             document.body.appendChild(text2);
                             colorsChildrenIds.push(text2.id);
