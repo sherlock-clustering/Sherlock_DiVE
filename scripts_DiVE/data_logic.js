@@ -271,6 +271,7 @@ function InitGlobalDataVariables() {
 
         function ColorizeCategory(indexOfProperty) {
             colorsDict = [];
+            textColorDict = [];
             entriesColor = [];
             var count30 = 0;
             for (var i = 0; i < graph._nodes.length; i++) {
@@ -288,12 +289,17 @@ function InitGlobalDataVariables() {
 
             var numberOfColors = Object.keys(entriesColor).length;
             var colors = getColors(numberOfColors);
-            var first30colors = ["blue", "darkgreen", "red", "yellow", "purple", "orange", "pink", "darkred", "navy", "darkkhaki",
-                             'lightskyblue', 'lightgreen', 'orchid', 'cadetblue', 'cyan', 'darksalmon', 'blueviolet',
-'seagreen', 'darkolivegreen', 'seashell',
-'royalblue', 'springgreen', 'indianred', 'darkgoldenrod', 'magenta', 'orangered', 'deeppink', 'rosybrown', 'darkturquoise', 'darkgray'];
+            //var first30colors = ["blue", "darkgreen", "red", "yellow", "purple", "orange", "pink", "darkred", "navy", "darkkhaki",
+            //                 'lightskyblue', 'lightgreen', 'orchid', 'cadetblue', 'cyan', 'mediumvioletred', 'blueviolet',
+            //    'seagreen', 'darkolivegreen', 'lightsalmon', 'seashell', 'royalblue', 'springgreen', 'indianred', 'darkgoldenrod', 'magenta', 'orangered', 'deeppink', 'darkturquoise', 'darkgray'];
 
-
+            // https://www.gavick.com/documentation/joomla/templates/customization/change-background-images 
+            var first30colors = [0xFF0000, 0xCCCC99, 0x009999, 0x66CCFF, 0x9933FF, 0xFF6633, 0x00FF00, 0x0066FF, 0xFF99FF, 0x666666,
+                                 0xFF9999, 0XCC9900, 0x66FFCC, 0x0000FF, 0x9999FF, 0xFFCC99, 0x99FF99, 0x00FFFF, 0xFF00FF, 0xCCCCCC,
+                                 0x660000, 0xFFFF00, 0x336666, 0x000066, 0x660099, 0x663300, 0x006600, 0x003399, 0x990066, 0x333333
+            ];
+            
+           
             var count = 0;
             for (var i = 0; i < graph._nodes.length; i++) {
                 var node = graph._nodes[i];
@@ -322,6 +328,7 @@ function InitGlobalDataVariables() {
                     
                     ChangeColor(node, colorPoint)
                     colorsDict[key] = colorPoint;
+                    textColorDict[key] = node.getColor();
                     //entriesColor[key] = 1;
                     //labelsForColorsDict[node.getColor()] = key;
                 }
@@ -522,7 +529,8 @@ function InitGlobalDataVariables() {
                             //text2.style.width = 100;
                             text2.style.height = 100;
                             text2.innerHTML = propertyValue + ":" + items[i][1];
-                            text2.style.color = colorsDict[propertyValue];
+                            text2.style.color = textColorDict[propertyValue];
+                            
                             text2.style.fontWeight = "bold";
                             text2.style.top = count + 'px';
                             text2.style.fontFamily = "Arial";

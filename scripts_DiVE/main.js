@@ -23,7 +23,8 @@
         var colorsChildrenIds;
         var entriesColor;
         var dataset = "pentax";
-        var fortythlargest =0;
+        var fortythlargest = 0;
+        var textColorDict;
         //################# global variables definitions end here
 
         //################# global code starts here
